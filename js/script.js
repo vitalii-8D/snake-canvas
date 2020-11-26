@@ -92,6 +92,10 @@ function drawGame() {
         y: snakeY
     }
 
+    if (snakeX === food.x && snakeY === food.y) {
+        
+    }
+
     snake.unshift(newHead);
 }
 

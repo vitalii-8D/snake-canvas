@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2473ef2c-bf36-405f-85f5-70f0701ada68" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/snake-canvas.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/food.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+    <list default="true" id="2473ef2c-bf36-405f-85f5-70f0701ada68" name="Default Changelist" comment="- In proccess">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +50,41 @@
       <option name="presentableId" value="Default" />
       <updated>1606220728232</updated>
       <workItem from="1606220729392" duration="3975000" />
-      <workItem from="1606341072883" duration="6212000" />
+      <workItem from="1606341072883" duration="6556000" />
     </task>
+    <task id="LOCAL-00001" summary="- In proccess">
+      <created>1606349953398</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606349953398</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- In proccess" />
+    <option name="LAST_COMMIT_MESSAGE" value="- In proccess" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1606349952668">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1606349952668" />
+    <state x="553" y="261" key="Github.ShareDialog" timestamp="1606349893097">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="553" y="261" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1606349893097" />
+    <state x="520" y="61" key="Github.UntrackedFilesDialog" timestamp="1606349915179">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="520" y="61" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606349915179" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1606350029839">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606350029839" />
   </component>
 </project>
