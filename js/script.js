@@ -11,24 +11,34 @@ let box = 32;
 
 let score = 0;
 
-let food = {
-    x: Math.floor(Math.random() * 17 + 1) * box,
-    y: Math.floor(Math.random() * 15 + 3) * box
-}
-
-function generateFood() {
-    food = {
-        x: Math.floor(Math.random() * 17 + 1) * box,
-        y: Math.floor(Math.random() * 15 + 3) * box
-    }
-}
-
+// initial snake
 let snake = [];
 snake[0] = {
     x: 9 * box,
     y: 10 * box
 }
 
+// initial food
+let food = {
+    x: Math.floor(Math.random() * 17 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 3) * box
+}
+
+function generateFood() {
+    let isTrueCoordinates;
+    while (!isTrueCoordinates) {
+        food = {
+            x: Math.floor(Math.random() * 17 + 1) * box,
+            y: Math.floor(Math.random() * 15 + 3) * box
+        }
+
+        isTrueCoordinates = !snake.find(chain => {
+            return chain.x === food.x && chain.y === food.y;
+        })
+    }
+}
+
+// Direction
 document.addEventListener('keydown', direction);
 
 let direct;
@@ -59,14 +69,26 @@ function drawGame() {
         ctx.fillRect(snake[i].x, snake[i].y, box, box);
     }
 
-    moving = false;
-
     ctx.fillStyle = 'white';
     ctx.font = '50px Arial';
     ctx.fillText(score, box * 3, box * 1.6)
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
+
+    // Check end
+    for (let i = 1; i < snake.length; i++) {
+        if (snake[i].x === snakeX && snake[i].y === snakeY) {
+            ctx.fillStyle = 'red';
+            ctx.fillRect(snake[0].x, snake[0].y, box, box);
+
+            ctx.fillStyle = 'red';
+            ctx.font = '50px Arial';
+            ctx.fillText('Game over!', box * 6, box * 1.6)
+
+            clearInterval(interval);
+        }
+    }
 
     snake.pop();
 
@@ -93,10 +115,19 @@ function drawGame() {
     }
 
     if (snakeX === food.x && snakeY === food.y) {
-        
+        let newBodyPart = {
+            x: snake[snake.length - 1],
+            y: snake[snake.length - 1]
+        }
+        snake.push(newBodyPart);
+
+        score++;
+        generateFood();
     }
 
     snake.unshift(newHead);
+    // timeout -= score * 5;
+    moving = false;
 }
-
-setInterval(drawGame, 150);
+let timeout = 300;
+let interval = setInterval(drawGame, timeout);

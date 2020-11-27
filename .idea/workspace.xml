@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2473ef2c-bf36-405f-85f5-70f0701ada68" name="Default Changelist" comment="- In proccess">
+    <list default="true" id="2473ef2c-bf36-405f-85f5-70f0701ada68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
@@ -32,6 +32,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../snake-game" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -50,7 +51,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606220728232</updated>
       <workItem from="1606220729392" duration="3975000" />
-      <workItem from="1606341072883" duration="6556000" />
+      <workItem from="1606341072883" duration="6563000" />
+      <workItem from="1606497765606" duration="6891000" />
     </task>
     <task id="LOCAL-00001" summary="- In proccess">
       <created>1606349953398</created>
@@ -59,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606349953398</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- In proccess">
+      <created>1606350272525</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606350272525</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,10 +79,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="- In proccess" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1606349952668">
+    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1606350271851">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1606349952668" />
+    <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1606350271851" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1606497802965">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606497802965" />
     <state x="553" y="261" key="Github.ShareDialog" timestamp="1606349893097">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
