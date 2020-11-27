@@ -86,7 +86,7 @@ function drawGame() {
             ctx.font = '50px Arial';
             ctx.fillText('Game over!', box * 6, box * 1.6)
 
-            clearInterval(interval);
+            intervalManager.clear();
         }
     }
 
@@ -122,12 +122,40 @@ function drawGame() {
         snake.push(newBodyPart);
 
         score++;
+        intervalManager.reset(10);
         generateFood();
     }
 
     snake.unshift(newHead);
-    // timeout -= score * 5;
     moving = false;
 }
-let timeout = 300;
-let interval = setInterval(drawGame, timeout);
+
+function intervalSeter(startTime) {
+    let timeout = startTime;
+    let interval;
+
+    function clear() {
+        clearInterval(interval)
+    }
+    function set() {
+        console.log('set');
+        console.log(timeout);
+        interval = setInterval(drawGame, timeout)
+    }
+    function reset(sub) {
+        clearInterval(interval);
+        console.log(timeout);
+        timeout -= sub;
+        console.log(timeout);
+        this.set();
+    }
+
+    return {
+        clear,
+        set,
+        reset
+    }
+}
+
+let intervalManager = intervalSeter(300);
+intervalManager.set();
