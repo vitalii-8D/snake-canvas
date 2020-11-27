@@ -46,7 +46,6 @@ let moving = false;
 
 function direction(event) {
     if (moving) return;
-    moving = true;
 
     if (event.keyCode === 37 && direct !== 'right') {
         direct = 'left';
@@ -57,6 +56,30 @@ function direction(event) {
     } else if (event.keyCode === 40 && direct !== 'up') {
         direct = 'down';
     }
+
+    moving = true;
+}
+// The same for clicks
+const scrWidth = window.innerWidth;
+const scrHeight = window.innerHeight;
+
+document.addEventListener('click', directionByClick);
+function directionByClick(event) {
+    if (moving) return;
+    const x = event.clientX;
+    const y = event.clientY;
+
+    if (x < scrWidth * 0.25 && (y > scrHeight * 0.25 && y < (scrHeight - scrHeight * 0.25)) && direct !== 'right') {
+        direct = 'left';
+    } else if ((x > scrWidth * 0.25 && x < (scrWidth - scrWidth * 0.25)) && y < scrHeight * 0.25 && direct !== 'down') {
+        direct = 'up';
+    } else if (x > (scrWidth - scrWidth * 0.25) && (y > scrHeight * 0.25 && y < (scrHeight - scrHeight * 0.25)) && direct !== 'left') {
+        direct = 'right';
+    } else if ((x > scrWidth * 0.25 && x < (scrWidth - scrWidth * 0.25)) && y > (scrHeight - scrHeight * 0.25) && direct !== 'up') {
+        direct = 'down';
+    }
+
+    moving = true;
 }
 
 function drawGame() {
@@ -130,6 +153,7 @@ function drawGame() {
     moving = false;
 }
 
+// Control of the game`s speed
 function intervalSeter(startTime) {
     let timeout = startTime;
     let interval;
@@ -138,15 +162,11 @@ function intervalSeter(startTime) {
         clearInterval(interval)
     }
     function set() {
-        console.log('set');
-        console.log(timeout);
         interval = setInterval(drawGame, timeout)
     }
     function reset(sub) {
         clearInterval(interval);
-        console.log(timeout);
         timeout -= sub;
-        console.log(timeout);
         this.set();
     }
 
